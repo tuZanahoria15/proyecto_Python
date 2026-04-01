@@ -1,5 +1,8 @@
 {
-  "python.analysis.extraPaths": ["./modules"],
+  "python.analysis.extraPaths": [
+    "./modules",
+    "./02-intermediate-pep8"
+  ],
   "editor.renderWhitespace": "all",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
