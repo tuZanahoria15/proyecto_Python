@@ -4,8 +4,8 @@ import json
 import urllib.parse
 import urllib.request
 
-from config import BASE_URL
-from exceptions import APIKeyError
+from .config import BASE_URL
+from .exceptions import APIKeyError
 
 
 # API N.2

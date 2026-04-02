@@ -1,8 +1,9 @@
 """Newsletter Analyzer System with multiple APIs."""
 
-from config import API_KEY
-from exceptions import APIKeyError
-from news_api_client import fetch_news
+# Using "." to import from the news_analyzer package, to indicate that the module is part of the same package.
+from news_analyzer.api_client import fetch_news
+from news_analyzer.config import API_KEY
+from news_analyzer.exceptions import APIKeyError
 
 # Starting with response_data as None to ensure it is defined even if an exception occurs
 response_data = None

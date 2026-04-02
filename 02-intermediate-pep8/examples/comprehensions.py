@@ -1,7 +1,8 @@
 # Lists comprehensions are useful for creating new lists based on existing iterables.
 # They provide a concise and readable way to generate lists in a single line of code.
 
-from sample_data import sample_articles
+from examples.sample_data import sample_articles
+
 
 # Extracting titles using a traditional for loop
 def extract_titles_traditional(articles):
