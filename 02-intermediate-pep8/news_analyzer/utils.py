@@ -104,3 +104,28 @@ def process_article_data(raw_data):
         None: Not yet implemented.
     """
     pass
+
+
+def get_unique_sources(articles):
+    return {
+        article.get("source").get("name")
+        for article in articles
+        if article.get("source") and article.get("source").get("name")
+    }
+
+
+def get_articles_by_source(articles: list[dict], source: str) -> list[dict]:
+    return list(
+        filter(
+            # Make sure the comparison is case-insensitive by converting both sides to lowercase
+            lambda article: article["source"]["name"].lower() == source.lower(),
+            articles,
+        )
+    )
+
+
+def get_reading_time(article: dict) -> dict:
+    """Calculate the estimated reading time for an article."""
+    minutes = len(article["content"]) // 200 + 1  # Assuming an average reading speed of 200 words per minute
+    article["reading_time"] = minutes
+    return article
